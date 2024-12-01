@@ -1,4 +1,4 @@
-from Mundo.ListaDeContactos import ListaDeContactos
+from src.ListaDeContactos import ListaDeContactos
 
 class Menu:
     

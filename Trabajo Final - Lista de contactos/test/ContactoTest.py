@@ -1,5 +1,5 @@
 import pytest
-from Mundo.Contacto import Contacto
+from src.Contacto import Contacto
 
 @pytest.fixture
 def contacto():

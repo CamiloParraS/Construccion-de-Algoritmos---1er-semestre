@@ -1,6 +1,6 @@
 import pytest
-from Mundo.Contacto import Contacto
-from Mundo.ListaDeContactos import ListaDeContactos
+from src.Contacto import Contacto
+from src.ListaDeContactos import ListaDeContactos
 
 @pytest.fixture
 def setup_escenario1():
