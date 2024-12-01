@@ -3,8 +3,8 @@ __license__="GPL"
 __version__="1.0.0"
 __Email__="juan.parrasan@campusucc.edu.co"
 
-from TiendadeLibros import TiendaDeLibros
-from UnLibro import Libro
+from src.TiendadeLibros import TiendaDeLibros
+from src.UnLibro import Libro
 
 def testTienda():
     # Crear una instancia de la tienda de libros
