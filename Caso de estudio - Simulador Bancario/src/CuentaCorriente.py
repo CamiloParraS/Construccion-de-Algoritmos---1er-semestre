@@ -1,0 +1,33 @@
+__author__="juan camilo parra"
+__license__="GPL"
+__version__="1.0.0"
+__Email__="juan.parrasan@campusucc.edu.co"
+
+class CuentaCorriente:
+#----------------------------------------------------------------
+# Atributos
+#----------------------------------------------------------------
+    __saldo = 0    
+#----------------------------------------------------------------
+# Metodos
+#----------------------------------------------------------------
+    __method__ = "DarSaldo"
+    __parameter__ = "Ninguno"
+    __returns__ = "Saldo de la cuenta"
+    __Description__ = "Metodo que muestra el saldo de la cuenta"
+    def DarSaldo(self):
+        return self.__saldo
+    
+    __method__ = "ConsignarSaldo"
+    __parameter__ = "Monto"
+    __returns__ = "Ninguno"
+    __Description__ = "Metodo que Permite consignar un monto a la cuenta"
+    def ConsignarSaldo(self, monto):
+        self.__saldo = self.__saldo+monto
+    
+    __method__ = "RetirarSaldo"
+    __parameter__ = "Monto"
+    __returns__ = "Ninguno"
+    __Description__ = "Metodo que Permite retirar un monto a la cuenta"
+    def RetirarSaldo(self, monto):
+        self.__saldo = self.__saldo-monto
