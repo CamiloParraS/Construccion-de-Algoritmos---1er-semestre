@@ -32,6 +32,10 @@ class Menu:
                 print(self.__miListaDeContactos.buscarContactosPalabraClave(input('Digite palabra clave: ')))
             elif op == 4:
                 contacto=self.__miListaDeContactos.buscarContacto(input('Digite nombre: '), input('Digite apellido: '))
+            elif op == 5:
+                contacto=self.__miListaDeContactos.eliminarContacto(input("Digite nombre: "), input("Digite apellido: "))
+            elif op == 6:
+                contacto=self.__miListaDeContactos.modificarContacto(input("Digite nombre: "), input("Digite apellido: "))
                 
                 print("Datos:", contacto.darNombre(), contacto.darApellido())
                 print("Direccion:", contacto.darDireccion())
