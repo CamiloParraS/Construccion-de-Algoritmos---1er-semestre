@@ -51,7 +51,7 @@ class ListaDeContactos:
         if contactoaEliminar:
             self.contactos.remove(contactoaEliminar)
 
-    def modificarContacto(self, nombre, apellido, direccion, correo, telefonos, palabras):
+    def modificarContacto(self, nombre, apellido=None, direccion=None, correo=None, telefonos=None, palabras=None):
         contactoAModificar = self.buscarContacto(nombre, apellido)
         if contactoAModificar:
             contactoAModificar.direccion = direccion
