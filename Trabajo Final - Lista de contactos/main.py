@@ -47,9 +47,15 @@ class Menu:
                    print("")
                    nuevaDireccion = input("Digita la nueva direccion del contacto: ") or None
                    nuevoCorreo = input("") or None
-                   nuevoTelefono = input("") or None
-                   nuevoasPalabras = input("") or None
-                
+                   nuevoTelefono = menu.AgregarTelefonos if input("Deseas modificar el telefono del contacto? (s/n): ") == "s" else None
+                   nuevasPalabras = menu.AgregarPalabras if input("Deseas agregar palabras clave al contacto? (s/n): ") == "s" else None
+                   
+                   datosModificados = menu.obtenerListaDeContactos.modificarContacto(nombre, apellido, nuevaDireccion, nuevoCorreo, nuevoTelefono, nuevasPalabras)
+                   if datosModificados:
+                       print("Contacto modificado con exito")
+                   else:
+                       print("No se pudo modifcar el contacto")
+                       
             print("Datos:", contacto.darNombre(), contacto.darApellido())
             print("Direccion:", contacto.darDireccion())
             print("correo electronico", contacto.darCorreo())
