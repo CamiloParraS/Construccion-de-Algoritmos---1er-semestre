@@ -26,8 +26,11 @@ class Menu:
             if op == 1:
                 datos=self.SolicitarDatosCompletos()
                 print(('no agregado', 'agregado con exito')[self.__miListaDeContactos.agregarContacto(datos[0],datos[1],datos[2],datos[3],datos[4],datos[5])])
+                
             elif op == 2:
-                print(self.__miListaDeContactos.darTodosLosContactos())
+                contactos = self.__miListaDeContactos.darTodosLosContactos()
+                print('contactos: ', contactos if contactos else 'no hay contactos registrados')
+                
             elif op == 3:
                 print(self.__miListaDeContactos.buscarContactosPalabraClave(input('Digite palabra clave: ')))
             elif op == 4:
