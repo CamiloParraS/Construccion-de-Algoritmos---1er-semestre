@@ -35,15 +35,28 @@ class Menu:
             elif op == 5:
                 contacto=self.__miListaDeContactos.eliminarContacto(input("Digite nombre: "), input("Digite apellido: "))
             elif op == 6:
-                contacto=self.__miListaDeContactos.modificarContacto(input("Digite nuevo nombre: "), input("Digite nuevo apellido: ", ), input("Digite nuevo telefono: "), input("Digite nuevo correo: "), input("Digite nueva direccion: "))
+               print('Modificar Contacto')
+               nombre = input("Digita el nombre del contacto a modificar: ")
+               apellido = input("Digita el apellido del contacto a modificar: ")
+               contacto = self.__miListaDeContactos.buscarContacto(nombre, apellido)
+               if not contacto:
+                   print("El Contacto no existe")
+               else:
+                   print(f"Contacto encontrado: {contacto.darNombre()} {contacto.darApellido()}")
+                   
+                   print("")
+                   nuevaDireccion = input("Digita la nueva direccion del contacto: ") or None
+                   nuevoCorreo = input("") or None
+                   nuevoTelefono = input("") or None
+                   nuevoasPalabras = input("") or None
                 
-                print("Datos:", contacto.darNombre(), contacto.darApellido())
-                print("Direccion:", contacto.darDireccion())
-                print("correo electronico", contacto.darCorreo())
-                print("Numeros telefonicos:")
-                print(contacto.darTelefonos())
-                print("Palabras claves:")
-                print(contacto.darPalabras())
+            print("Datos:", contacto.darNombre(), contacto.darApellido())
+            print("Direccion:", contacto.darDireccion())
+            print("correo electronico", contacto.darCorreo())
+            print("Numeros telefonicos:")
+            print(contacto.darTelefonos())
+            print("Palabras claves:")
+            print(contacto.darPalabras())
             
             elif op == 0:
                 salir = True
