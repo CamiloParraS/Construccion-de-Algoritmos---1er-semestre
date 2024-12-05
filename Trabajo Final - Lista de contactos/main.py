@@ -35,7 +35,7 @@ class Menu:
             elif op == 5:
                 contacto=self.__miListaDeContactos.eliminarContacto(input("Digite nombre: "), input("Digite apellido: "))
             elif op == 6:
-                contacto=self.__miListaDeContactos.modificarContacto(input("Digite nombre: "), input("Digite apellido: "))
+                contacto=self.__miListaDeContactos.modificarContacto(input("Digite nuevo nombre: "), input("Digite nuevo apellido: ", ), input("Digite nuevo telefono: "), input("Digite nuevo correo: "), input("Digite nueva direccion: "))
                 
                 print("Datos:", contacto.darNombre(), contacto.darApellido())
                 print("Direccion:", contacto.darDireccion())
