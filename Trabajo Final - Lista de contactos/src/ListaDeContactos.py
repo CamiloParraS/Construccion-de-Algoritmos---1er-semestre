@@ -3,7 +3,7 @@ __license__="GPL"
 __version__="1.0.0"
 __Email__="juan.parrasan@campusucc.edu.co"
 
-from Contacto import Contacto
+from src.Contacto import Contacto
 
 class ListaDeContactos:
     def __init__(self):
